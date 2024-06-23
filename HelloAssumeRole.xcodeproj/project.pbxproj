@@ -11,6 +11,10 @@
 		CC1D14932C2766BF00F130A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1D14922C2766BF00F130A7 /* ContentView.swift */; };
 		CC1D14952C2766C000F130A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC1D14942C2766C000F130A7 /* Assets.xcassets */; };
 		CC1D14992C2766C000F130A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC1D14982C2766C000F130A7 /* Preview Assets.xcassets */; };
+		CC1D14A22C276A5000F130A7 /* AWSClientRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CC1D14A12C276A5000F130A7 /* AWSClientRuntime */; };
+		CC1D14A42C276A5900F130A7 /* AWSS3 in Frameworks */ = {isa = PBXBuildFile; productRef = CC1D14A32C276A5900F130A7 /* AWSS3 */; };
+		CC1D14A62C276A6000F130A7 /* AWSSTS in Frameworks */ = {isa = PBXBuildFile; productRef = CC1D14A52C276A6000F130A7 /* AWSSTS */; };
+		CC1D14A82C276D3200F130A7 /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1D14A72C276D3200F130A7 /* ContentManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,7 @@
 		CC1D14942C2766C000F130A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC1D14962C2766C000F130A7 /* HelloAssumeRole.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloAssumeRole.entitlements; sourceTree = "<group>"; };
 		CC1D14982C2766C000F130A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC1D14A72C276D3200F130A7 /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC1D14A62C276A6000F130A7 /* AWSSTS in Frameworks */,
+				CC1D14A42C276A5900F130A7 /* AWSS3 in Frameworks */,
+				CC1D14A22C276A5000F130A7 /* AWSClientRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +46,7 @@
 			children = (
 				CC1D148F2C2766BF00F130A7 /* HelloAssumeRole */,
 				CC1D148E2C2766BF00F130A7 /* Products */,
+				CC1D14A02C276A5000F130A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +63,7 @@
 			children = (
 				CC1D14902C2766BF00F130A7 /* HelloAssumeRoleApp.swift */,
 				CC1D14922C2766BF00F130A7 /* ContentView.swift */,
+				CC1D14A72C276D3200F130A7 /* ContentManager.swift */,
 				CC1D14942C2766C000F130A7 /* Assets.xcassets */,
 				CC1D14962C2766C000F130A7 /* HelloAssumeRole.entitlements */,
 				CC1D14972C2766C000F130A7 /* Preview Content */,
@@ -67,6 +77,13 @@
 				CC1D14982C2766C000F130A7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC1D14A02C276A5000F130A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +102,11 @@
 			dependencies = (
 			);
 			name = HelloAssumeRole;
+			packageProductDependencies = (
+				CC1D14A12C276A5000F130A7 /* AWSClientRuntime */,
+				CC1D14A32C276A5900F130A7 /* AWSS3 */,
+				CC1D14A52C276A6000F130A7 /* AWSSTS */,
+			);
 			productName = HelloAssumeRole;
 			productReference = CC1D148D2C2766BF00F130A7 /* HelloAssumeRole.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +135,9 @@
 				Base,
 			);
 			mainGroup = CC1D14842C2766BF00F130A7;
+			packageReferences = (
+				CC1D149F2C27699F00F130A7 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */,
+			);
 			productRefGroup = CC1D148E2C2766BF00F130A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC1D14932C2766BF00F130A7 /* ContentView.swift in Sources */,
+				CC1D14A82C276D3200F130A7 /* ContentManager.swift in Sources */,
 				CC1D14912C2766BF00F130A7 /* HelloAssumeRoleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +385,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC1D149F2C27699F00F130A7 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/awslabs/aws-sdk-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.46.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC1D14A12C276A5000F130A7 /* AWSClientRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC1D149F2C27699F00F130A7 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSClientRuntime;
+		};
+		CC1D14A32C276A5900F130A7 /* AWSS3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC1D149F2C27699F00F130A7 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSS3;
+		};
+		CC1D14A52C276A6000F130A7 /* AWSSTS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC1D149F2C27699F00F130A7 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSSTS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC1D14852C2766BF00F130A7 /* Project object */;
 }
